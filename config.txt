@@ -1,0 +1,46 @@
+[server]
+
+server_url : http://proserver
+
+### User should have admin access
+personal_access_token_name   : rstryker
+personal_access_token_secret : 
+
+### 
+### Site names or content URLs
+### Leave blank to search all sites
+###
+site_list : ace, Administration
+
+[users]
+
+last_login_threshold_days : 30
+
+[smtp]
+
+server   : smarthost.tsi.lan
+port     : 25
+username : 
+password : 
+do_tls   : Off
+
+[notification]
+
+from    : proserver@tableau.com
+subject : Absent Tableau Site User Notification
+
+body_notification_reason:
+    You've been missed!  This notification has been auto-generated because {reason_text}.
+
+body_helpful_information:
+    [Provide help information and useful links]
+
+[testing]
+
+suppress_notification  : On
+user_email_redirect_to : rstryker@tableau.com
+
+[logging]
+
+log_file_dir : .\Logs\
+console_logging_level : INFO
